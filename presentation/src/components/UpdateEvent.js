@@ -3,7 +3,7 @@ import React from 'react';
 export default class UpdateEvent extends React.Component {
     state = {
         title: this.props.event.title,
-        date: this.props.event.date
+        date: this.props.event.date,
     };
     handleSubmit = (e) => {
         e.preventDefault();
@@ -36,10 +36,11 @@ export default class UpdateEvent extends React.Component {
                     placeholder="Date"
                     value={this.state.date}
                     onChange={this.handleChange} />
-                                
+                
                 <input type="submit"
                     value="Update Event"/>
             </form>           
         ) 
     }
 }
+

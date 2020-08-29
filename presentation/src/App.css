@@ -1,15 +1,28 @@
 ul {
   list-style: none;
 }
-
+body {
+  background-color: rgb(198, 234, 245);
+}
+button:hover{
+  background-color: aquamarine;
+}
 .App {
   text-align: center;
+  margin-bottom: 5rem;
 }
-
+.Top {
+  text-align: center;
+  color: rgb(14, 49, 14);
+}
+.Calendar {
+  scale: flex;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 
 .App-header {
   background-color: #282c34;

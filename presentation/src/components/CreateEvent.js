@@ -3,7 +3,8 @@ import React from 'react';
 export default class NewEvent extends React.Component {
     state = {
         title: "",
-        date: ""
+        date: "",
+        type: ""
     };
     handleSubmit = (e) => {
         e.preventDefault();
@@ -19,7 +20,8 @@ export default class NewEvent extends React.Component {
             .then(() => {
                 this.setState({
                     title: "",
-                    date: ""
+                    date: "",
+                    type: ""
                 })
             }) .then(this.props.refresh)            
     }
@@ -40,7 +42,13 @@ export default class NewEvent extends React.Component {
                     placeholder="Date"
                     value={this.state.date}
                     onChange={this.handleChange} />
-                
+                <select name="type"
+                    value={this.state.type} 
+                    onChange={this.handleChange}>
+                    <option value="Appointment">Appointment</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Fun">Fun</option>
+                </select>
                 
                 <input type="submit"
                     value="Add Event"/>
